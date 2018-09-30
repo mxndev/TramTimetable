@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D029C5352161956D00A26132 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C5342161956D00A26132 /* AppDelegate.swift */; };
+		D029C5372161956D00A26132 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C5362161956D00A26132 /* ViewController.swift */; };
+		D029C53A2161956D00A26132 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D029C5382161956D00A26132 /* Main.storyboard */; };
+		D029C53C2161956D00A26132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D029C53B2161956D00A26132 /* Assets.xcassets */; };
+		D029C53F2161956D00A26132 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D029C53D2161956D00A26132 /* LaunchScreen.storyboard */; };
+		D029C54A2161956D00A26132 /* Tram_TimetableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C5492161956D00A26132 /* Tram_TimetableTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D029C5462161956D00A26132 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D029C5292161956D00A26132 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D029C5302161956D00A26132;
+			remoteInfo = "Tram Timetable";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D029C5312161956D00A26132 /* Tram Timetable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tram Timetable.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D029C5342161956D00A26132 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D029C5362161956D00A26132 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D029C5392161956D00A26132 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D029C53B2161956D00A26132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D029C53E2161956D00A26132 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D029C5402161956D00A26132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D029C5452161956D00A26132 /* Tram TimetableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tram TimetableTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D029C5492161956D00A26132 /* Tram_TimetableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tram_TimetableTests.swift; sourceTree = "<group>"; };
+		D029C54B2161956D00A26132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D029C52E2161956D00A26132 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D029C5422161956D00A26132 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D029C5282161956D00A26132 = {
+			isa = PBXGroup;
+			children = (
+				D029C5332161956D00A26132 /* Tram Timetable */,
+				D029C5482161956D00A26132 /* Tram TimetableTests */,
+				D029C5322161956D00A26132 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D029C5322161956D00A26132 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D029C5312161956D00A26132 /* Tram Timetable.app */,
+				D029C5452161956D00A26132 /* Tram TimetableTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D029C5332161956D00A26132 /* Tram Timetable */ = {
+			isa = PBXGroup;
+			children = (
+				D029C5342161956D00A26132 /* AppDelegate.swift */,
+				D029C5362161956D00A26132 /* ViewController.swift */,
+				D029C5382161956D00A26132 /* Main.storyboard */,
+				D029C53B2161956D00A26132 /* Assets.xcassets */,
+				D029C53D2161956D00A26132 /* LaunchScreen.storyboard */,
+				D029C5402161956D00A26132 /* Info.plist */,
+			);
+			path = "Tram Timetable";
+			sourceTree = "<group>";
+		};
+		D029C5482161956D00A26132 /* Tram TimetableTests */ = {
+			isa = PBXGroup;
+			children = (
+				D029C5492161956D00A26132 /* Tram_TimetableTests.swift */,
+				D029C54B2161956D00A26132 /* Info.plist */,
+			);
+			path = "Tram TimetableTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D029C5302161956D00A26132 /* Tram Timetable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D029C54E2161956D00A26132 /* Build configuration list for PBXNativeTarget "Tram Timetable" */;
+			buildPhases = (
+				D029C52D2161956D00A26132 /* Sources */,
+				D029C52E2161956D00A26132 /* Frameworks */,
+				D029C52F2161956D00A26132 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tram Timetable";
+			productName = "Tram Timetable";
+			productReference = D029C5312161956D00A26132 /* Tram Timetable.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D029C5442161956D00A26132 /* Tram TimetableTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D029C5512161956D00A26132 /* Build configuration list for PBXNativeTarget "Tram TimetableTests" */;
+			buildPhases = (
+				D029C5412161956D00A26132 /* Sources */,
+				D029C5422161956D00A26132 /* Frameworks */,
+				D029C5432161956D00A26132 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D029C5472161956D00A26132 /* PBXTargetDependency */,
+			);
+			name = "Tram TimetableTests";
+			productName = "Tram TimetableTests";
+			productReference = D029C5452161956D00A26132 /* Tram TimetableTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D029C5292161956D00A26132 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Mikołaj Płachta";
+				TargetAttributes = {
+					D029C5302161956D00A26132 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					D029C5442161956D00A26132 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = D029C5302161956D00A26132;
+					};
+				};
+			};
+			buildConfigurationList = D029C52C2161956D00A26132 /* Build configuration list for PBXProject "Tram Timetable" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D029C5282161956D00A26132;
+			productRefGroup = D029C5322161956D00A26132 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D029C5302161956D00A26132 /* Tram Timetable */,
+				D029C5442161956D00A26132 /* Tram TimetableTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D029C52F2161956D00A26132 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D029C53F2161956D00A26132 /* LaunchScreen.storyboard in Resources */,
+				D029C53C2161956D00A26132 /* Assets.xcassets in Resources */,
+				D029C53A2161956D00A26132 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D029C5432161956D00A26132 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D029C52D2161956D00A26132 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D029C5372161956D00A26132 /* ViewController.swift in Sources */,
+				D029C5352161956D00A26132 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D029C5412161956D00A26132 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D029C54A2161956D00A26132 /* Tram_TimetableTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D029C5472161956D00A26132 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D029C5302161956D00A26132 /* Tram Timetable */;
+			targetProxy = D029C5462161956D00A26132 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D029C5382161956D00A26132 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D029C5392161956D00A26132 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D029C53D2161956D00A26132 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D029C53E2161956D00A26132 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D029C54C2161956D00A26132 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D029C54D2161956D00A26132 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D029C54F2161956D00A26132 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6539W4BMT7;
+				INFOPLIST_FILE = "Tram Timetable/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mxndev.Tram-Timetable";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D029C5502161956D00A26132 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6539W4BMT7;
+				INFOPLIST_FILE = "Tram Timetable/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mxndev.Tram-Timetable";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D029C5522161956D00A26132 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6539W4BMT7;
+				INFOPLIST_FILE = "Tram TimetableTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mxndev.Tram-TimetableTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tram Timetable.app/Tram Timetable";
+			};
+			name = Debug;
+		};
+		D029C5532161956D00A26132 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6539W4BMT7;
+				INFOPLIST_FILE = "Tram TimetableTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mxndev.Tram-TimetableTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tram Timetable.app/Tram Timetable";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D029C52C2161956D00A26132 /* Build configuration list for PBXProject "Tram Timetable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D029C54C2161956D00A26132 /* Debug */,
+				D029C54D2161956D00A26132 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D029C54E2161956D00A26132 /* Build configuration list for PBXNativeTarget "Tram Timetable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D029C54F2161956D00A26132 /* Debug */,
+				D029C5502161956D00A26132 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D029C5512161956D00A26132 /* Build configuration list for PBXNativeTarget "Tram TimetableTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D029C5522161956D00A26132 /* Debug */,
+				D029C5532161956D00A26132 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D029C5292161956D00A26132 /* Project object */;
+}
