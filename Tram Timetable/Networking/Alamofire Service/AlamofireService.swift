@@ -8,25 +8,38 @@
 
 import Alamofire
 
-protocol AlamofireServiceBase {
-    func executeAlamofireRequest(request: APIRequestBase, completionHandler: @escaping (Int?, Data?, Error?) -> Void)
-    func cancel()
-}
-
-extension AlamofireServiceBase {
-    // retrieve executed request to appriopriate response status
-    func executeRequest(request: APIRequestBase, completionHandler: @escaping (NetworkResponse<Data>) -> Void) {
+class AlamofireService: AlamofireServiceBase {
+    
+    // set up oauth2 handler to refresh connection
+    public static let sessionManager: SessionManager = {
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = 15
         
-        executeAlamofireRequest(request: request) { [completionHandler] (statusCode: Int?, data: Data?, error: Error?) in
-            if let statusCode = statusCode {
-                if let data = data, statusCode < 300 {
-                    completionHandler(.success(data))
-                } else {
-                    completionHandler(.failure(statusCode, error))
-                }
-            } else {
-                completionHandler(.failure(500, error))
+        let manager = SessionManager(configuration: configuration)
+        return manager
+    }()
+    
+    private var alamofireRequest: DataRequest?
+    
+    func executeAlamofireRequest(request: APIRequestBase, completionHandler: @escaping (Int?, Data?, Error?) -> Void) {
+        
+        if AlamofireConnectivity.isConnected {
+            let url = URL(string: request.path)
+            
+            alamofireRequest = AlamofireService.sessionManager.request(url!, method: request.method, parameters: request.parameters, encoding: JSONEncoding.default, headers: request.headers).validate().response { [completionHandler] (dataResponse: DefaultDataResponse) in
+                
+                print("PATH: \(request.path)")
+                print("STATUS CODE: \((dataResponse.response?.statusCode ?? -1))")
+                
+                completionHandler(dataResponse.response?.statusCode, dataResponse.data, dataResponse.error)
             }
+        } else {
+            // error: no internet
+            completionHandler(-1009, nil, NSError(domain: "nointernet", code: -1009, userInfo: nil))
         }
+    }
+    
+    func cancel() {
+        alamofireRequest?.cancel()
     }
 }

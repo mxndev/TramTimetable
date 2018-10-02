@@ -18,7 +18,7 @@ struct APIRequest: APIRequestBase {
 extension APIRequest {
     
     init(method: HTTPMethod, endpoint: String, parameters: Parameters? = nil, requiredAuthentication: Bool) {
-        let path = UPNConfig.baseURL().absoluteString + UPNConfig.baseAPIURL().path + "/" + endpoint
-        self.init(method: method, path: path, headers: headers, parameters: parameters)
+//        let path = UPNConfig.baseURL().absoluteString + UPNConfig.baseAPIURL().path + "/" + endpoint
+        self.init(method: method, path: endpoint, headers: nil, parameters: parameters)
     }
 }

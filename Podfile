@@ -8,5 +8,6 @@ target 'Tram Timetable' do
   # Pods for Tram Timetable
 
   pod 'Alamofire'
+  pod 'Swinject'
 
 end

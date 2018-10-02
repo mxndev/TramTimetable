@@ -12,6 +12,19 @@ protocol TramServicesProtocol {
 //    func tokenService(username: String, password: String, completionHandler: @escaping (NetworkResponse<TokenInfo>) -> Void)
 }
 
+extension TramServicesProtocol {
+    static var instance: TramServicesProtocol {
+        guard let resolved = SharedContainer.sharedContainer.resolve(TramServicesProtocol.self) else {
+            let service = TramServices()
+            SharedContainer.sharedContainer.register(TramServicesProtocol.self) { [service] _ in
+                service
+            }
+            return service
+        }
+        return resolved
+    }
+}
+
 class TramServices: TramServicesProtocol {
     
     private let alamofireService: AlamofireServiceBase = SharedContainer.sharedContainer.resolve(AlamofireServiceBase.self)!
