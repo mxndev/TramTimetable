@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="TimetableCell" rowHeight="-170" id="2Yp-uG-HCB" customClass="TimetableCell" customModule="Tram_Timetable" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Yp-uG-HCB" id="VXJ-ob-7eh">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Rz-Rq-qGo">
+                        <rect key="frame" x="0.0" y="0.0" width="40" height="99.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zer-jf-ioQ">
+                                <rect key="frame" x="10" y="40" width="20" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20784313725490194" green="0.20000000000000001" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="1ne-lh-sNm"/>
+                            <constraint firstItem="Zer-jf-ioQ" firstAttribute="centerY" secondItem="2Rz-Rq-qGo" secondAttribute="centerY" id="eK2-w0-tbf"/>
+                            <constraint firstItem="Zer-jf-ioQ" firstAttribute="centerX" secondItem="2Rz-Rq-qGo" secondAttribute="centerX" id="hap-JZ-alN"/>
+                        </constraints>
+                    </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Mzu-Ph-4tT">
+                        <rect key="frame" x="40" y="0.0" width="335" height="99.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZBt-JL-3Bc">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2Rz-Rq-qGo" firstAttribute="leading" secondItem="VXJ-ob-7eh" secondAttribute="leading" id="2dP-dw-yUX"/>
+                    <constraint firstAttribute="bottom" secondItem="Mzu-Ph-4tT" secondAttribute="bottom" id="5kC-XQ-Dla"/>
+                    <constraint firstItem="Mzu-Ph-4tT" firstAttribute="top" secondItem="VXJ-ob-7eh" secondAttribute="top" id="DR2-72-edq"/>
+                    <constraint firstItem="2Rz-Rq-qGo" firstAttribute="top" secondItem="VXJ-ob-7eh" secondAttribute="top" id="Kj9-if-0Ah"/>
+                    <constraint firstItem="Mzu-Ph-4tT" firstAttribute="leading" secondItem="2Rz-Rq-qGo" secondAttribute="trailing" id="PTb-ak-Xru"/>
+                    <constraint firstAttribute="bottom" secondItem="2Rz-Rq-qGo" secondAttribute="bottom" id="YFz-Gu-jf9"/>
+                    <constraint firstAttribute="trailing" secondItem="Mzu-Ph-4tT" secondAttribute="trailing" id="tEo-dL-mDa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="hourLabel" destination="Zer-jf-ioQ" id="5Cv-Ed-LBb"/>
+                <outlet property="minutesView" destination="Mzu-Ph-4tT" id="3Fi-F7-Ur9"/>
+            </connections>
+            <point key="canvasLocation" x="93.5" y="47"/>
+        </tableViewCell>
+    </objects>
+</document>
