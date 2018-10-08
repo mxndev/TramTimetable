@@ -44,6 +44,9 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="lr0-vz-3Is"/>
             <size key="customSize" width="183" height="112"/>
+            <connections>
+                <outlet property="minutesLabel" destination="Zer-jf-ioQ" id="hiP-OY-owY"/>
+            </connections>
             <point key="canvasLocation" x="92.5" y="261"/>
         </collectionViewCell>
     </objects>
