@@ -7,9 +7,14 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol TimetableViewModelBase {
-    var delegate: MapScreenViewDelegate? { get set }
+    var delegate: TimetableViewDelegate? { get set }
+    
+    var timetable: Variable<[TimetableRow]> { get set }
+    
+    func loadTimetable()
 }
 
 extension TimetableViewModelBase {

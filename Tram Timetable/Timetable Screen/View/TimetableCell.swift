@@ -6,13 +6,13 @@
 //  Copyright © 2018 Mikołaj Płachta. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class TimetableCell : UITableViewCell {
+class TimetableCell: UITableViewCell {
     static let timetableCellNib = "TimetableCell"
     
-    @IBOutlet private weak var hourLabel: UILabel!
-    @IBOutlet private weak var minutesView: UICollectionView!
+    @IBOutlet weak var hourLabel: UILabel!
+    @IBOutlet weak var minutesView: UICollectionView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -9,5 +9,7 @@ target 'Tram Timetable' do
 
   pod 'Alamofire'
   pod 'Swinject'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
 end

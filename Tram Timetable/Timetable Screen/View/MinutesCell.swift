@@ -6,9 +6,9 @@
 //  Copyright © 2018 Mikołaj Płachta. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class MinutesCell : UICollectionViewCell {
+class MinutesCell: UICollectionViewCell {
     static let minutesCellNib = "MinutesCell"
     
     @IBOutlet private weak var minutesLabel: UILabel!

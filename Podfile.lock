@@ -1,20 +1,29 @@
 PODS:
   - Alamofire (4.7.3)
+  - RxCocoa (4.2.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.2.0)
   - Swinject (2.4.1)
 
 DEPENDENCIES:
   - Alamofire
+  - RxCocoa
+  - RxSwift
   - Swinject
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - RxCocoa
+    - RxSwift
     - Swinject
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   Swinject: f7f15a9672e99328c1f07f277091087917215700
 
-PODFILE CHECKSUM: 873184acb4ec2ef366cd8b1aa1390a05e1d771ba
+PODFILE CHECKSUM: 27cbe3fa04183b1e66af5a8b6fefcd732bf76fe6
 
 COCOAPODS: 1.5.0
