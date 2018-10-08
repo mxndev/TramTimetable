@@ -14,6 +14,9 @@
 		199C4802216AD0B300F49B5B /* MinutesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 199C4800216AD0B200F49B5B /* MinutesCell.xib */; };
 		199C4810216B861200F49B5B /* TimetableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C480F216B861200F49B5B /* TimetableRow.swift */; };
 		199C4812216B862400F49B5B /* WarsawTimetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C4811216B862400F49B5B /* WarsawTimetable.swift */; };
+		199C4815216B983100F49B5B /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C4814216B983100F49B5B /* TimetableViewController.swift */; };
+		199C4818216B987E00F49B5B /* TimetableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C4817216B987E00F49B5B /* TimetableViewModel.swift */; };
+		199C481B216B989800F49B5B /* TimetableViewModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C481A216B989800F49B5B /* TimetableViewModelBase.swift */; };
 		9827F920B50A446BB6EBF428 /* Pods_Tram_Timetable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B6B559619D90503379DAE9 /* Pods_Tram_Timetable.framework */; };
 		D029C5352161956D00A26132 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C5342161956D00A26132 /* AppDelegate.swift */; };
 		D029C5372161956D00A26132 /* MapScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C5362161956D00A26132 /* MapScreenViewController.swift */; };
@@ -53,6 +56,9 @@
 		199C4800216AD0B200F49B5B /* MinutesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MinutesCell.xib; sourceTree = "<group>"; };
 		199C480F216B861200F49B5B /* TimetableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableRow.swift; sourceTree = "<group>"; };
 		199C4811216B862400F49B5B /* WarsawTimetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawTimetable.swift; sourceTree = "<group>"; };
+		199C4814216B983100F49B5B /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
+		199C4817216B987E00F49B5B /* TimetableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewModel.swift; sourceTree = "<group>"; };
+		199C481A216B989800F49B5B /* TimetableViewModelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewModelBase.swift; sourceTree = "<group>"; };
 		8BEBC5D801AFFC1354C01B38 /* Pods-Tram Timetable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tram Timetable.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tram Timetable/Pods-Tram Timetable.release.xcconfig"; sourceTree = "<group>"; };
 		9683EBEC86EBBB76BF0D1BF2 /* Pods-Tram Timetable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tram Timetable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tram Timetable/Pods-Tram Timetable.debug.xcconfig"; sourceTree = "<group>"; };
 		D029C5312161956D00A26132 /* Tram Timetable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tram Timetable.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +117,8 @@
 				199C480E216B85CF00F49B5B /* Model */,
 				199C47F7216AB1B400F49B5B /* Timetable.storyboard */,
 				199C47FA216AC7F700F49B5B /* View */,
+				199C4813216B981600F49B5B /* ViewController */,
+				199C4816216B986B00F49B5B /* ViewModel */,
 			);
 			path = "Timetable Screen";
 			sourceTree = "<group>";
@@ -133,6 +141,23 @@
 				199C4811216B862400F49B5B /* WarsawTimetable.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		199C4813216B981600F49B5B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				199C4814216B983100F49B5B /* TimetableViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		199C4816216B986B00F49B5B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				199C4817216B987E00F49B5B /* TimetableViewModel.swift */,
+				199C481A216B989800F49B5B /* TimetableViewModelBase.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B228E3927D17BBB9BB691EE8 /* Pods */ = {
@@ -393,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				199C4818216B987E00F49B5B /* TimetableViewModel.swift in Sources */,
 				D029C570216433F300A26132 /* SharedCointainer.swift in Sources */,
 				199C4810216B861200F49B5B /* TimetableRow.swift in Sources */,
 				D029C5372161956D00A26132 /* MapScreenViewController.swift in Sources */,
@@ -405,10 +431,12 @@
 				D029C5642162E95900A26132 /* NetworkResult.swift in Sources */,
 				D029C5602162E8AC00A26132 /* APIRequestBase.swift in Sources */,
 				D029C5662162E98300A26132 /* TramService.swift in Sources */,
+				199C481B216B989800F49B5B /* TimetableViewModelBase.swift in Sources */,
 				D029C5582162E81500A26132 /* AlamofireService.swift in Sources */,
 				199C4801216AD0B300F49B5B /* MinutesCell.swift in Sources */,
 				D029C5622162E8C000A26132 /* TramRouter.swift in Sources */,
 				D029C55E2162E89D00A26132 /* APIRequest.swift in Sources */,
+				199C4815216B983100F49B5B /* TimetableViewController.swift in Sources */,
 				D029C5352161956D00A26132 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
