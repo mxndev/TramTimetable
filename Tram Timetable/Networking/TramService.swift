@@ -27,7 +27,7 @@ extension TramServicesProtocol {
 
 class TramServices: TramServicesProtocol {
     
-    private let alamofireService: AlamofireServiceBase = SharedContainer.sharedContainer.resolve(AlamofireServiceBase.self)!
+    private let alamofireService: AlamofireServiceBase = AlamofireService.instance
     
 //    func tokenService(username: String, password: String, completionHandler: @escaping (NetworkResponse<TokenInfo>) -> Void) {
 //        let tokenRequest = APIRouter.getToken(username: username, password: password).request

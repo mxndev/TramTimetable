@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="TimetableCell" rowHeight="-170" id="2Yp-uG-HCB" customClass="TimetableCell" customModule="Tram_Timetable" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="TimetableCell" rowHeight="50" id="2Yp-uG-HCB" customClass="TimetableCell" customModule="Tram_Timetable" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Yp-uG-HCB" id="VXJ-ob-7eh">
@@ -38,8 +38,11 @@
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Mzu-Ph-4tT">
                         <rect key="frame" x="40" y="0.0" width="335" height="99.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZBt-JL-3Bc">
-                            <size key="itemSize" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="99.5" id="Hao-P0-Vd3"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ZBt-JL-3Bc">
+                            <size key="itemSize" width="36" height="36"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -58,7 +61,9 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="hourLabel" destination="Zer-jf-ioQ" id="5Cv-Ed-LBb"/>
+                <outlet property="hoursViewWidth" destination="1ne-lh-sNm" id="9Mk-E9-n7q"/>
                 <outlet property="minutesView" destination="Mzu-Ph-4tT" id="3Fi-F7-Ur9"/>
+                <outlet property="minutesViewHeight" destination="Hao-P0-Vd3" id="cu1-x0-jyx"/>
             </connections>
             <point key="canvasLocation" x="93.5" y="47"/>
         </tableViewCell>

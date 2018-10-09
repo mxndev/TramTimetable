@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import RxSwift
 
 struct TimetableRow {
     let hour: String
-    let minutes: [String]
+    let minutes: Variable<[String]>
     
 //    init(timetable: WarsawTimetable) {
 //        timetable

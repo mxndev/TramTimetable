@@ -18,11 +18,11 @@ class TimetableViewModel: TimetableViewModelBase {
     
     func loadTimetable() {
         // TODO: script to download data from server
-        timetable.value.append(TimetableRow(hour: "3", minutes: ["32", "23", "33"]))
-        timetable.value.append(TimetableRow(hour: "6", minutes: ["01", "15"]))
-        timetable.value.append(TimetableRow(hour: "7", minutes: ["32", "23", "33", "45", "33"]))
-        timetable.value.append(TimetableRow(hour: "8", minutes: ["32", "44", "33", "33", "45", "33", "58", "33"]))
-        timetable.value.append(TimetableRow(hour: "13", minutes: ["32", "18", "33", "14", "33", "33", "45", "33", "58", "33"]))
-        timetable.value.append(TimetableRow(hour: "22", minutes: ["32", "23", "18", "33", "33"]))
+        timetable.value.append(TimetableRow(hour: "3", minutes: Variable(["32", "23", "33"])))
+        timetable.value.append(TimetableRow(hour: "6", minutes: Variable(["01", "15"])))
+        timetable.value.append(TimetableRow(hour: "7", minutes: Variable(["32", "23", "33", "45", "33"])))
+        timetable.value.append(TimetableRow(hour: "8", minutes: Variable(["32", "44", "33", "33", "45", "33", "58", "33"])))
+        timetable.value.append(TimetableRow(hour: "13", minutes: Variable(["32", "18", "33", "14", "33", "33", "45", "33", "58", "33"])))
+        timetable.value.append(TimetableRow(hour: "22", minutes: Variable(["32", "23", "18", "33", "33"])))
     }
 }
