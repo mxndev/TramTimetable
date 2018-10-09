@@ -10,6 +10,7 @@ import Alamofire
 
 struct APIRequest: APIRequestBase {
     let method: HTTPMethod
+    let type: APIType
     let path: String
     var headers: Headers?
     let parameters: Parameters?
@@ -17,8 +18,15 @@ struct APIRequest: APIRequestBase {
 
 extension APIRequest {
     
-    init(method: HTTPMethod, endpoint: String, parameters: Parameters? = nil, requiredAuthentication: Bool) {
-//        let path = UPNConfig.baseURL().absoluteString + UPNConfig.baseAPIURL().path + "/" + endpoint
-        self.init(method: method, path: endpoint, headers: nil, parameters: parameters)
+    init(method: HTTPMethod, type: APIType, endpoint: String, parameters: Parameters? = nil, requiredAuthentication: Bool) {
+        var path: String
+        switch type {
+            case .rawData: 
+                path = Constants.Networking.RawDataAPI.host + "/" + Constants.Networking.RawDataAPI.version + "/" + endpoint
+            case .warsawAPI:
+                path = Constants.Networking.WarsawAPI.host + "/" + Constants.Networking.WarsawAPI.version + "/" + endpoint
+        }
+        
+        self.init(method: method, type: type, path: path, headers: nil, parameters: parameters)
     }
 }

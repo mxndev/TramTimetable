@@ -13,6 +13,7 @@ import RxCocoa
 class TimetableViewController: UIViewController {
     
     @IBOutlet private weak var timetableView: UITableView!
+    @IBOutlet private weak var timetableHeight: NSLayoutConstraint!
     
     let disposeBag = DisposeBag()
     
@@ -32,11 +33,10 @@ class TimetableViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidLayoutSubviews() {
+        self.timetableHeight.constant = self.getTableViewHeight()
+    }
     private func configureSubviews() {
-//        self.guestListView.guestListTableView?.rx
-//            .setDelegate(self)
-//            .disposed(by: disposeBag)
-        
         // register nib
         timetableView.registerNib(name: TimetableCell.timetableCellNib)
         
@@ -45,6 +45,7 @@ class TimetableViewController: UIViewController {
         
         self.viewModel.timetable.asObservable()
             .bind(to: (timetableView?.rx.items(cellIdentifier: TimetableCell.timetableCellNib, cellType: TimetableCell.self))!) { (row, element, cell) in
+                
                 cell.hourLabel.text = element.hour
                 
                 element.minutes.asObservable()
@@ -52,15 +53,15 @@ class TimetableViewController: UIViewController {
                         collectionCell.minutesLabel.text = collectionElement
                     }
                     .disposed(by: cell.disposeBag)
-//                cell.numberOfGuestLabel?.text = "#\(row+1)"
-                let d = self.timetableView.frame.size.width
-                let dd = cell.minutesView.frame.size.width
-//                self.view.layoutIfNeeded()
-                let dd2  = CGFloat(cell.calculateHeightOfMinutesView(of: element.minutes.value))
+
                 cell.minutesViewHeight.constant = CGFloat(cell.calculateHeightOfMinutesView(of: element.minutes.value))
             }
             .disposed(by: disposeBag)
     }
 }
 
-
+extension TimetableViewController {
+    func getTableViewHeight() -> CGFloat {
+        return timetableView.contentSize.height
+    }
+}

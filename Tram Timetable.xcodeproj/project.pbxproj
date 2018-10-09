@@ -37,6 +37,7 @@
 		D029C56C216432CA00A26132 /* MapScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C56B216432CA00A26132 /* MapScreenViewModel.swift */; };
 		D029C56E216432E000A26132 /* MapScreenViewModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C56D216432E000A26132 /* MapScreenViewModelBase.swift */; };
 		D029C570216433F300A26132 /* SharedCointainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C56F216433F300A26132 /* SharedCointainer.swift */; };
+		D04CE09F216D5F9B005B8153 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04CE09E216D5F9B005B8153 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		D029C56B216432CA00A26132 /* MapScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewModel.swift; sourceTree = "<group>"; };
 		D029C56D216432E000A26132 /* MapScreenViewModelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewModelBase.swift; sourceTree = "<group>"; };
 		D029C56F216433F300A26132 /* SharedCointainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedCointainer.swift; sourceTree = "<group>"; };
+		D04CE09E216D5F9B005B8153 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,9 +207,10 @@
 		D029C5332161956D00A26132 /* Tram Timetable */ = {
 			isa = PBXGroup;
 			children = (
-				19455194216CE4F6002526F0 /* Extensions */,
 				D029C5342161956D00A26132 /* AppDelegate.swift */,
 				D029C53B2161956D00A26132 /* Assets.xcassets */,
+				D04CE09E216D5F9B005B8153 /* Constants.swift */,
+				19455194216CE4F6002526F0 /* Extensions */,
 				D029C5402161956D00A26132 /* Info.plist */,
 				D029C53D2161956D00A26132 /* LaunchScreen.storyboard */,
 				D029C5672164315800A26132 /* Map Screen */,
@@ -442,6 +445,7 @@
 				D029C5372161956D00A26132 /* MapScreenViewController.swift in Sources */,
 				D029C56C216432CA00A26132 /* MapScreenViewModel.swift in Sources */,
 				199C4812216B862400F49B5B /* WarsawTimetable.swift in Sources */,
+				D04CE09F216D5F9B005B8153 /* Constants.swift in Sources */,
 				D029C55A2162E82200A26132 /* AlamofireServiceBase.swift in Sources */,
 				D029C55C2162E86C00A26132 /* Connectivity.swift in Sources */,
 				199C47FE216AC94E00F49B5B /* TimetableCell.swift in Sources */,

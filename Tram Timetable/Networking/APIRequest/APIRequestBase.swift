@@ -10,8 +10,14 @@ import Alamofire
 
 typealias Headers = [String: String]
 
+enum APIType {
+    case rawData
+    case warsawAPI
+}
+
 protocol APIRequestBase {
     var method: HTTPMethod { get }
+    var type: APIType { get }
     var path: String { get }
     var headers: Headers? { get }
     var parameters: Parameters? { get }
