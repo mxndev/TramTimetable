@@ -14,7 +14,11 @@ class MapScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        configureSubviews()
+        
+        // load timetable from server
+        self.viewModel.loadTramStops()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,6 +26,6 @@ class MapScreenViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    private func configureSubviews() {
+    }
 }
-

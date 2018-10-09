@@ -10,6 +10,8 @@ import Foundation
 
 protocol MapScreenViewModelBase {
     var delegate: MapScreenViewDelegate? { get set }
+    
+    func loadTramStops()
 }
 
 extension MapScreenViewModelBase {

@@ -38,6 +38,7 @@
 		D029C56E216432E000A26132 /* MapScreenViewModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C56D216432E000A26132 /* MapScreenViewModelBase.swift */; };
 		D029C570216433F300A26132 /* SharedCointainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C56F216433F300A26132 /* SharedCointainer.swift */; };
 		D04CE09F216D5F9B005B8153 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04CE09E216D5F9B005B8153 /* Constants.swift */; };
+		D04CE0A2216D7291005B8153 /* TramStops.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04CE0A1216D7291005B8153 /* TramStops.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		D029C56D216432E000A26132 /* MapScreenViewModelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewModelBase.swift; sourceTree = "<group>"; };
 		D029C56F216433F300A26132 /* SharedCointainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedCointainer.swift; sourceTree = "<group>"; };
 		D04CE09E216D5F9B005B8153 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D04CE0A1216D7291005B8153 /* TramStops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TramStops.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +266,7 @@
 		D029C5672164315800A26132 /* Map Screen */ = {
 			isa = PBXGroup;
 			children = (
+				D04CE0A0216D7277005B8153 /* Model */,
 				D029C5382161956D00A26132 /* Map.storyboard */,
 				D029C5692164317500A26132 /* ViewController */,
 				D029C5682164316E00A26132 /* ViewModel */,
@@ -286,6 +289,14 @@
 				D029C5362161956D00A26132 /* MapScreenViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D04CE0A0216D7277005B8153 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D04CE0A1216D7291005B8153 /* TramStops.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,6 +457,7 @@
 				D029C56C216432CA00A26132 /* MapScreenViewModel.swift in Sources */,
 				199C4812216B862400F49B5B /* WarsawTimetable.swift in Sources */,
 				D04CE09F216D5F9B005B8153 /* Constants.swift in Sources */,
+				D04CE0A2216D7291005B8153 /* TramStops.swift in Sources */,
 				D029C55A2162E82200A26132 /* AlamofireServiceBase.swift in Sources */,
 				D029C55C2162E86C00A26132 /* Connectivity.swift in Sources */,
 				199C47FE216AC94E00F49B5B /* TimetableCell.swift in Sources */,

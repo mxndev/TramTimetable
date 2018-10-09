@@ -36,6 +36,7 @@ class TimetableViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         self.timetableHeight.constant = self.getTableViewHeight()
     }
+    
     private func configureSubviews() {
         // register nib
         timetableView.registerNib(name: TimetableCell.timetableCellNib)

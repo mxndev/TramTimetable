@@ -9,7 +9,7 @@
 import Foundation
 
 protocol TramServicesProtocol {
-//    func tokenService(username: String, password: String, completionHandler: @escaping (NetworkResponse<TokenInfo>) -> Void)
+    func stopsService(completionHandler: @escaping (NetworkResponse<TramStopsResponse>) -> Void)
 }
 
 extension TramServicesProtocol {
@@ -29,11 +29,11 @@ class TramServices: TramServicesProtocol {
     
     private let alamofireService: AlamofireServiceBase = AlamofireService.instance
     
-//    func tokenService(username: String, password: String, completionHandler: @escaping (NetworkResponse<TokenInfo>) -> Void) {
-//        let tokenRequest = APIRouter.getToken(username: username, password: password).request
-//        alamofireService.executeRequest(request: tokenRequest) { (result: NetworkResponse<Data>) in
-//            let serializedResult: NetworkResponse<TokenInfo> = result.decodeData()
-//            completionHandler(serializedResult)
-//        }
-//    }
+    func stopsService(completionHandler: @escaping (NetworkResponse<TramStopsResponse>) -> Void) {
+        let stopsRequest = TramRouter.getStops.request
+        alamofireService.executeRequest(request: stopsRequest) { (result: NetworkResponse<Data>) in
+            let serializedResult: NetworkResponse<TramStopsResponse> = result.decodeData()
+            completionHandler(serializedResult)
+        }
+    }
 }
