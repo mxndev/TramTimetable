@@ -14,9 +14,10 @@ protocol MapScreenViewModelBase {
     
     var stops: [Stops] { get set }
     var closestStop: String { get set }
+    var currentLocation: CLLocationCoordinate2D? { get set }
     
     func loadTramStops()
-    func calculateClosestStop(location: CLLocationCoordinate2D)
+    func calculateClosestStop()
 }
 
 extension MapScreenViewModelBase {

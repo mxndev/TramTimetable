@@ -62,10 +62,19 @@ class TimetableViewController: UIViewController {
                 element.minutes.asObservable()
                     .bind(to: (cell.minutesView?.rx.items(cellIdentifier: MinutesCell.minutesCellNib, cellType: MinutesCell.self))!) { (collectionRow, collectionElement, collectionCell) in
                         collectionCell.minutesLabel.text = collectionElement
+                        
+                        if (self.viewModel.calculateNextTramTime().0 == row) && (self.viewModel.calculateNextTramTime().01 == collectionRow) {
+                            collectionCell.minutesView.backgroundColor = UIColor.green
+                        } else {
+                            collectionCell.minutesView.backgroundColor = UIColor.clear
+                        }
+                        
                     }
                     .disposed(by: cell.disposeBag)
 
                 cell.minutesViewHeight.constant = CGFloat(cell.calculateHeightOfMinutesView(of: element.minutes.value))
+                
+                
             }
             .disposed(by: disposeBag)
     }

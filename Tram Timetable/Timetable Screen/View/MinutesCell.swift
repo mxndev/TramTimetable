@@ -11,6 +11,7 @@ import UIKit
 class MinutesCell: UICollectionViewCell {
     static let minutesCellNib = "MinutesCell"
     
+    @IBOutlet weak var minutesView: UIView!
     @IBOutlet weak var minutesLabel: UILabel!
     
     override func awakeFromNib() {

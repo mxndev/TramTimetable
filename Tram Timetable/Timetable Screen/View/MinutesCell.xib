@@ -56,6 +56,7 @@
             <size key="customSize" width="36" height="36"/>
             <connections>
                 <outlet property="minutesLabel" destination="Zer-jf-ioQ" id="hiP-OY-owY"/>
+                <outlet property="minutesView" destination="fiT-yf-woj" id="fAo-g3-kAN"/>
             </connections>
             <point key="canvasLocation" x="19" y="223"/>
         </collectionViewCell>

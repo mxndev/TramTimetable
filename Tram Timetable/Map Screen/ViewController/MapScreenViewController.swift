@@ -72,13 +72,9 @@ extension MapScreenViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation:CLLocation = locations[0] as CLLocation
         
-        // Call stopUpdatingLocation() to stop listening for location updates,
-        // other wise this function will be called every time when user location changes.
-        
         // calculate the closest stop
-        viewModel.calculateClosestStop(location: userLocation.coordinate)
-        print("user latitude = \(userLocation.coordinate.latitude)")
-        print("user longitude = \(userLocation.coordinate.longitude)")
+        viewModel.currentLocation = userLocation.coordinate
+        viewModel.calculateClosestStop()
     }
 }
 
@@ -86,8 +82,8 @@ extension MapScreenViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
         let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
+        annotationView.canShowCallout = true
         
-        guard let locationName = annotation.title else { return nil }
         if let stopAnnotation = annotation as? StopPoint {
             if viewModel.closestStop == stopAnnotation.stopId {
                 annotationView.pinTintColor = UIColor.blue

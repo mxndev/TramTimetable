@@ -43,4 +43,25 @@ class TimetableViewModel: TimetableViewModelBase {
             timetable.value.append(TimetableRow(hour: hour, minutes: Variable([minutes])))
         }
     }
+    
+    func calculateNextTramTime() -> (Int, Int) {
+        // retrieve current time
+        let timeNow = Date()
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "pl_PL")
+        formatter.dateFormat = "yyyy-MM-dd"
+        let currentDate = formatter.string(from: timeNow)
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        
+        for (rowIndex, row) in timetable.value.enumerated() {
+            for (minuteIndex, minute) in row.minutes.value.enumerated() {
+                if let date = formatter.date(from: String(format: "%@ %@:%@", currentDate, row.hour, minute)) {
+                    if date > timeNow {
+                        return (rowIndex, minuteIndex)
+                    }
+                }
+            }
+        }
+        return (0, 0)
+    }
 }

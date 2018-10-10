@@ -15,6 +15,7 @@ protocol TimetableViewModelBase {
     var timetable: Variable<[TimetableRow]> { get set }
     
     func loadTimetable()
+    func calculateNextTramTime() -> (Int, Int)
 }
 
 extension TimetableViewModelBase {
