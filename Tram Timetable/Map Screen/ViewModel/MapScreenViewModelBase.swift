@@ -11,6 +11,8 @@ import Foundation
 protocol MapScreenViewModelBase {
     var delegate: MapScreenViewDelegate? { get set }
     
+    var stops: [Stops] { get set }
+    
     func loadTramStops()
 }
 
@@ -28,4 +30,5 @@ extension MapScreenViewModelBase {
 }
 
 protocol MapScreenViewDelegate: class {
+    func showPinsOnMap(stops: [StopPoint])
 }

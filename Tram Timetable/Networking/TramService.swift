@@ -9,7 +9,7 @@
 import Foundation
 
 protocol TramServicesProtocol {
-    func stopsService(completionHandler: @escaping (NetworkResponse<TramStopsResponse>) -> Void)
+    func stopsService(completionHandler: @escaping (NetworkResponse<StopsResponse>) -> Void)
 }
 
 extension TramServicesProtocol {
@@ -29,10 +29,10 @@ class TramServices: TramServicesProtocol {
     
     private let alamofireService: AlamofireServiceBase = AlamofireService.instance
     
-    func stopsService(completionHandler: @escaping (NetworkResponse<TramStopsResponse>) -> Void) {
+    func stopsService(completionHandler: @escaping (NetworkResponse<StopsResponse>) -> Void) {
         let stopsRequest = TramRouter.getStops.request
         alamofireService.executeRequest(request: stopsRequest) { (result: NetworkResponse<Data>) in
-            let serializedResult: NetworkResponse<TramStopsResponse> = result.decodeData()
+            let serializedResult: NetworkResponse<StopsResponse> = result.decodeData()
             completionHandler(serializedResult)
         }
     }

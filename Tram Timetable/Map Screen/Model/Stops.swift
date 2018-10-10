@@ -1,5 +1,5 @@
 //
-//  TramStops.swift
+//  Stops.swift
 //  Tram Timetable
 //
 //  Created by Mikołaj-iMac on 10.10.2018.
@@ -8,15 +8,15 @@
 
 import Foundation
 
-struct TramStopsResponse: Codable {
-    let stops: [TramStops]
+struct StopsResponse: Codable {
+    let stops: [Stops]
     
     enum CodingKeys: String, CodingKey {
         case stops = "stops"
     }
 }
 
-struct TramStops: Codable {
+struct Stops: Codable {
     let direction: String
     let latitude: Double
     let longitude: Double

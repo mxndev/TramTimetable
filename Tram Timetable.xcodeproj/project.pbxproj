@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		19455196216CE50E002526F0 /* UITableView+RegisterNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19455195216CE50E002526F0 /* UITableView+RegisterNib.swift */; };
 		19455198216CE96D002526F0 /* UICollectionView+RegisterNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19455197216CE96D002526F0 /* UICollectionView+RegisterNib.swift */; };
+		1945519A216E05D3002526F0 /* StopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19455199216E05D3002526F0 /* StopPoint.swift */; };
 		199C47F9216AB1B400F49B5B /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 199C47F7216AB1B400F49B5B /* Timetable.storyboard */; };
 		199C47FD216AC94E00F49B5B /* TimetableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 199C47FB216AC94D00F49B5B /* TimetableCell.xib */; };
 		199C47FE216AC94E00F49B5B /* TimetableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C47FC216AC94E00F49B5B /* TimetableCell.swift */; };
@@ -38,7 +39,7 @@
 		D029C56E216432E000A26132 /* MapScreenViewModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C56D216432E000A26132 /* MapScreenViewModelBase.swift */; };
 		D029C570216433F300A26132 /* SharedCointainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C56F216433F300A26132 /* SharedCointainer.swift */; };
 		D04CE09F216D5F9B005B8153 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04CE09E216D5F9B005B8153 /* Constants.swift */; };
-		D04CE0A2216D7291005B8153 /* TramStops.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04CE0A1216D7291005B8153 /* TramStops.swift */; };
+		D04CE0A2216D7291005B8153 /* Stops.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04CE0A1216D7291005B8153 /* Stops.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		16B6B559619D90503379DAE9 /* Pods_Tram_Timetable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tram_Timetable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19455195216CE50E002526F0 /* UITableView+RegisterNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RegisterNib.swift"; sourceTree = "<group>"; };
 		19455197216CE96D002526F0 /* UICollectionView+RegisterNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterNib.swift"; sourceTree = "<group>"; };
+		19455199216E05D3002526F0 /* StopPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopPoint.swift; sourceTree = "<group>"; };
 		199C47F8216AB1B400F49B5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Timetable.storyboard; sourceTree = "<group>"; };
 		199C47FB216AC94D00F49B5B /* TimetableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimetableCell.xib; sourceTree = "<group>"; };
 		199C47FC216AC94E00F49B5B /* TimetableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableCell.swift; sourceTree = "<group>"; };
@@ -89,7 +91,7 @@
 		D029C56D216432E000A26132 /* MapScreenViewModelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewModelBase.swift; sourceTree = "<group>"; };
 		D029C56F216433F300A26132 /* SharedCointainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedCointainer.swift; sourceTree = "<group>"; };
 		D04CE09E216D5F9B005B8153 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		D04CE0A1216D7291005B8153 /* TramStops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TramStops.swift; sourceTree = "<group>"; };
+		D04CE0A1216D7291005B8153 /* Stops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stops.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,7 +296,8 @@
 		D04CE0A0216D7277005B8153 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D04CE0A1216D7291005B8153 /* TramStops.swift */,
+				D04CE0A1216D7291005B8153 /* Stops.swift */,
+				19455199216E05D3002526F0 /* StopPoint.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -457,10 +460,11 @@
 				D029C56C216432CA00A26132 /* MapScreenViewModel.swift in Sources */,
 				199C4812216B862400F49B5B /* WarsawTimetable.swift in Sources */,
 				D04CE09F216D5F9B005B8153 /* Constants.swift in Sources */,
-				D04CE0A2216D7291005B8153 /* TramStops.swift in Sources */,
+				D04CE0A2216D7291005B8153 /* Stops.swift in Sources */,
 				D029C55A2162E82200A26132 /* AlamofireServiceBase.swift in Sources */,
 				D029C55C2162E86C00A26132 /* Connectivity.swift in Sources */,
 				199C47FE216AC94E00F49B5B /* TimetableCell.swift in Sources */,
+				1945519A216E05D3002526F0 /* StopPoint.swift in Sources */,
 				D029C56E216432E000A26132 /* MapScreenViewModelBase.swift in Sources */,
 				19455196216CE50E002526F0 /* UITableView+RegisterNib.swift in Sources */,
 				D029C5642162E95900A26132 /* NetworkResult.swift in Sources */,
