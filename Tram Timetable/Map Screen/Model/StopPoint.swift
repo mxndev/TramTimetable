@@ -9,7 +9,9 @@
 import MapKit
 
 class StopPoint: MKPointAnnotation {
-    init(locationName: String, latitude: Double, longitude: Double) {
+    var stopId: String
+    init(stopId:String, locationName: String, latitude: Double, longitude: Double) {
+        self.stopId = stopId
         super.init()
         
         self.title = locationName

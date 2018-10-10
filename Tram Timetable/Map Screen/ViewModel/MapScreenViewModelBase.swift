@@ -7,13 +7,16 @@
 //
 
 import Foundation
+import CoreLocation
 
 protocol MapScreenViewModelBase {
     var delegate: MapScreenViewDelegate? { get set }
     
     var stops: [Stops] { get set }
+    var closestStop: String { get set }
     
     func loadTramStops()
+    func calculateClosestStop(location: CLLocationCoordinate2D)
 }
 
 extension MapScreenViewModelBase {
