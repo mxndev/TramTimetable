@@ -18,7 +18,7 @@ struct Constants {
         struct WarsawAPI {
             static let host: String = "https://api.um.warszawa.pl"
             static let version: String = "api/action"
-            static let key: String = ""
+            static let key: String = "cdd84653-b895-4619-8011-6b9edf842b84"
         }
     }
 }

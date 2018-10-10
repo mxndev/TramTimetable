@@ -31,4 +31,5 @@ extension TimetableViewModelBase {
 }
 
 protocol TimetableViewDelegate: class {
+    func showActivityIndicator(loaded: Bool)
 }

@@ -12,8 +12,4 @@ import RxSwift
 struct TimetableRow {
     let hour: String
     let minutes: Variable<[String]>
-    
-//    init(timetable: WarsawTimetable) {
-//        timetable
-//    }
 }

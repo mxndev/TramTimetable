@@ -9,15 +9,14 @@
 import Foundation
 
 struct WarsawTimetableResponse: Codable {
-    let ticketTypesArray: [WarsawTimetable]
-    
-    enum CodingKeys: String, CodingKey {
-        case ticketTypesArray = "support_ticket_types"
-    }
+    let result: [WarsawTimetable]
 }
 
 struct WarsawTimetable: Codable {
-    let id: Int
-    let name: String
-    let type: String
+    let values: [WarsawTimetableKV]
+}
+
+struct WarsawTimetableKV: Codable {
+    let value: String
+    let key: String
 }

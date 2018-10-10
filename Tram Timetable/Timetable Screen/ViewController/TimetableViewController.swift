@@ -19,6 +19,16 @@ class TimetableViewController: UIViewController {
     
     fileprivate var viewModel: TimetableViewModelBase = TimetableViewModel.instance
     
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel.delegate = self
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.viewModel.delegate = self
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,7 +44,7 @@ class TimetableViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        self.timetableHeight.constant = self.getTableViewHeight()
+        self.timetableHeight.constant = getTableViewHeight()
     }
     
     private func configureSubviews() {
@@ -63,6 +73,15 @@ class TimetableViewController: UIViewController {
 
 extension TimetableViewController {
     func getTableViewHeight() -> CGFloat {
-        return timetableView.contentSize.height
+        let maximumHeight = self.view.frame.height - self.timetableView.frame.origin.y
+        return timetableView.contentSize.height > maximumHeight ? maximumHeight : timetableView.contentSize.height
+    }
+}
+
+extension TimetableViewController: TimetableViewDelegate {
+    func showActivityIndicator(loaded: Bool) {
+        if loaded {
+            self.timetableHeight.constant = getTableViewHeight()
+        }
     }
 }

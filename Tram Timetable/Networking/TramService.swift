@@ -10,6 +10,7 @@ import Foundation
 
 protocol TramServicesProtocol {
     func stopsService(completionHandler: @escaping (NetworkResponse<StopsResponse>) -> Void)
+    func timetableService(stopID: String, stopNr: String, line: String, completionHandler: @escaping (NetworkResponse<WarsawTimetableResponse>) -> Void)
 }
 
 extension TramServicesProtocol {
@@ -33,6 +34,14 @@ class TramServices: TramServicesProtocol {
         let stopsRequest = TramRouter.getStops.request
         alamofireService.executeRequest(request: stopsRequest) { (result: NetworkResponse<Data>) in
             let serializedResult: NetworkResponse<StopsResponse> = result.decodeData()
+            completionHandler(serializedResult)
+        }
+    }
+    
+    func timetableService(stopID: String, stopNr: String, line: String, completionHandler: @escaping (NetworkResponse<WarsawTimetableResponse>) -> Void) {
+        let timetableRequest = TramRouter.getTimetable(stopID: stopID, stopNr: stopNr, line: line).request
+        alamofireService.executeRequest(request: timetableRequest) { (result: NetworkResponse<Data>) in
+            let serializedResult: NetworkResponse<WarsawTimetableResponse> = result.decodeData()
             completionHandler(serializedResult)
         }
     }
