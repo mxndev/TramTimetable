@@ -8,10 +8,13 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class MapScreenViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
+    
+    var locationManager:CLLocationManager!
     
     fileprivate var viewModel: MapScreenViewModelBase = MapScreenViewModel.instance
     
@@ -32,6 +35,7 @@ class MapScreenViewController: UIViewController {
         
         // load timetable from server
         self.viewModel.loadTramStops()
+        startReadingLocation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,6 +52,45 @@ extension MapScreenViewController {
         let radius: Double = pow(10, 4)
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, radius, radius)
         mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    func startReadingLocation() {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    func calculateClosestStop(location: CLLocationCoordinate2D) -> Int {
+        var point = (0, 0.0) // (index, radius)
+        for (index, element) in viewModel.stops.enumerated() {
+            let radius = sqrt(pow(element.latitude - location.latitude, 2) + pow(element.longitude - location.longitude, 2))
+            if point.1 == 0 {
+                point = (index, radius)
+            }
+            if radius < point.1 {
+                point = (index, radius)
+            }
+        }
+        return point.0
+    }
+}
+
+extension MapScreenViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation:CLLocation = locations[0] as CLLocation
+        
+        // Call stopUpdatingLocation() to stop listening for location updates,
+        // other wise this function will be called every time when user location changes.
+        
+        // manager.stopUpdatingLocation()
+        let dd = calculateClosestStop(location: userLocation.coordinate)
+        print("user latitude = \(userLocation.coordinate.latitude)")
+        print("user longitude = \(userLocation.coordinate.longitude)")
     }
 }
 
