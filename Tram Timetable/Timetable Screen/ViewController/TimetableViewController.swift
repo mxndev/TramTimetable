@@ -18,6 +18,7 @@ class TimetableViewController: UIViewController {
     @IBOutlet private weak var stopNameLabel: UILabel!
     @IBOutlet private weak var directionNameLabel: UILabel!
     @IBOutlet private weak var closeButton: UIButton!
+    @IBOutlet private weak var loadingView: UIView!
     
     let disposeBag = DisposeBag()
     
@@ -97,7 +98,10 @@ extension TimetableViewController {
 extension TimetableViewController: TimetableViewDelegate {
     func showActivityIndicator(loaded: Bool) {
         if loaded {
+            loadingView.isHidden = true
             self.timetableHeight.constant = getTableViewHeight()
+        } else {
+            loadingView.isHidden = false
         }
     }
     
@@ -105,5 +109,17 @@ extension TimetableViewController: TimetableViewDelegate {
         lineNumberLabel.text = lineNumber
         stopNameLabel.text = stopName
         directionNameLabel.text = direction
+    }
+    
+    func showLoadingError() {
+        let alertController = UIAlertController(title: "Sorry, error during loading!", message: "Try again later.", preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        topMostController().present(alertController, animated: true)
+    }
+    
+    func showNoInternetConnectionError() {
+        let alertController = UIAlertController(title: "Sorry, no internet connection!", message: "Try again later.", preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        topMostController().present(alertController, animated: true)
     }
 }

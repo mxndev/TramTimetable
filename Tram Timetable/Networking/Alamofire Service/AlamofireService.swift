@@ -35,7 +35,7 @@ class AlamofireService: AlamofireServiceBase {
             }
         } else {
             // error: no internet
-            completionHandler(-1009, nil, NSError(domain: "nointernet", code: -1009, userInfo: nil))
+            completionHandler(nil, nil, nil)
         }
     }
     

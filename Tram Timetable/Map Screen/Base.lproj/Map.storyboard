@@ -21,17 +21,35 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5lQ-Us-ArZ">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </mapView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KDG-RR-gkX">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Za2-Tv-rcZ">
+                                        <rect key="frame" x="177" y="313" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.65212367959999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Za2-Tv-rcZ" firstAttribute="centerY" secondItem="KDG-RR-gkX" secondAttribute="centerY" id="Tjg-xP-aIt"/>
+                                    <constraint firstItem="Za2-Tv-rcZ" firstAttribute="centerX" secondItem="KDG-RR-gkX" secondAttribute="centerX" id="aF6-W1-uQI"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5lQ-Us-ArZ" secondAttribute="bottom" id="63h-64-ZCV"/>
                             <constraint firstItem="5lQ-Us-ArZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Ow-3y-pNw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KDG-RR-gkX" secondAttribute="trailing" id="IdZ-qv-rii"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KDG-RR-gkX" secondAttribute="bottom" id="jmP-Jw-LZh"/>
                             <constraint firstItem="5lQ-Us-ArZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lV5-RL-LbY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5lQ-Us-ArZ" secondAttribute="trailing" id="lgW-NL-gdn"/>
+                            <constraint firstItem="KDG-RR-gkX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nm4-dF-p4a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="KDG-RR-gkX" secondAttribute="top" id="vG4-ch-SPC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="loadingView" destination="KDG-RR-gkX" id="zQH-2u-jlj"/>
                         <outlet property="mapView" destination="5lQ-Us-ArZ" id="93P-8v-ZDf"/>
                         <segue destination="flw-9X-ufb" kind="presentation" identifier="ShowTimetable" id="oVI-JI-24i"/>
                     </connections>

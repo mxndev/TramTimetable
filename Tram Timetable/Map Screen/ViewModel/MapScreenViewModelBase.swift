@@ -34,5 +34,8 @@ extension MapScreenViewModelBase {
 }
 
 protocol MapScreenViewDelegate: class {
+    func showActivityIndicator(loaded: Bool)
     func showPinsOnMap(stops: [StopPoint])
+    func showLoadingError()
+    func showNoInternetConnectionError()
 }

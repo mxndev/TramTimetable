@@ -20,6 +20,7 @@ class MapScreenViewModel: MapScreenViewModelBase {
     private let apiServices: TramServicesProtocol = TramServices.instance
     
     func loadTramStops() {
+        delegate?.showActivityIndicator(loaded: false)
         apiServices.stopsService() { (result: NetworkResponse<StopsResponse>) in
             switch result {
                 case .success(let listOfStops):
@@ -27,10 +28,15 @@ class MapScreenViewModel: MapScreenViewModelBase {
                     self.stops = listOfStops.stops
                     self.delegate?.showPinsOnMap(stops: self.stops.map({ StopPoint(stopId: $0.stopID,locationName: $0.name, latitude: $0.latitude, longitude: $0.longitude) }))
                     self.calculateClosestStop()
-                case .failure(_, let error):
-                    let dd = 0
-//                    self.delegate?.presentErrorMessage(error: error!)
+                case .failure(let error):
+                    switch error {
+                        case .NoInternetConnection:
+                            self.delegate?.showNoInternetConnectionError()
+                        default:
+                            self.delegate?.showLoadingError()
+                    }
             }
+            self.delegate?.showActivityIndicator(loaded: true)
         }
     }
     

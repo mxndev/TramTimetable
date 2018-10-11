@@ -13,6 +13,7 @@ import CoreLocation
 class MapScreenViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet private weak var loadingView: UIView!
     
     var locationManager:CLLocationManager!
     
@@ -30,22 +31,18 @@ class MapScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        configureSubviews()
-        
         mapView.delegate = self
-        
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
         // load timetable from server
         self.viewModel.loadTramStops()
         startReadingLocation()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    private func configureSubviews() {
     }
 }
 
@@ -86,6 +83,7 @@ extension MapScreenViewController: MKMapViewDelegate {
         if let stopAnnotation = annotation as? StopPoint {
             if viewModel.closestStop == stopAnnotation.stopId {
                 annotationView.pinTintColor = UIColor.blue
+                self.centerMapOnLocation(location: CLLocation(latitude: annotation.coordinate.latitude, longitude: annotation.coordinate.longitude))
             } else {
                 annotationView.pinTintColor = UIColor.red
             }
@@ -106,21 +104,31 @@ extension MapScreenViewController: MKMapViewDelegate {
 }
 
 extension MapScreenViewController: MapScreenViewDelegate {
+    func showActivityIndicator(loaded: Bool) {
+        loadingView.isHidden = loaded
+    }
+    
     func showPinsOnMap(stops: [StopPoint]) {
-//        loadingView.isHidden = true
+        loadingView.isHidden = true
         
         for point in mapView.annotations {
             mapView.removeAnnotation(point)
         }
         
         stops.forEach({
-            let point = $0
-            
-            if mapView.annotations.count == 0 {
-                // if point is first one
-                self.centerMapOnLocation(location: CLLocation(latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude))
-            }
-            mapView.addAnnotation(point)
+            mapView.addAnnotation($0)
         })
+    }
+    
+    func showLoadingError() {
+        let alertController = UIAlertController(title: "Sorry, error during loading!", message: "Try again later.", preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        topMostController().present(alertController, animated: true)
+    }
+    
+    func showNoInternetConnectionError() {
+        let alertController = UIAlertController(title: "Sorry, no internet connection!", message: "Try again later.", preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        topMostController().present(alertController, animated: true)
     }
 }

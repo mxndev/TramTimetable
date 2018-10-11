@@ -34,14 +34,19 @@ class TimetableViewModel: TimetableViewModelBase {
         timetable.value.removeAll()
         self.delegate?.setStopInfo(stopName: "-", direction: "-", lineNumber: "-")
         if let stop = stopInfo.value {
+            self.delegate?.showActivityIndicator(loaded: false)
             apiServices.timetableService(stopID: String(stop.stopID[String.Index.init(encodedOffset: 0)..<String.Index.init(encodedOffset: 4)]), stopNr: String(stop.stopID[String.Index.init(encodedOffset: 4)..<String.Index.init(encodedOffset: 6)]), line: stop.line) { (result: NetworkResponse<WarsawTimetableResponse>) in
                 switch result {
                     case .success(let warsawTimetableResponse):
                         self.convertToTimetableRow(warsawTimetable: warsawTimetableResponse.result)
                         self.delegate?.setStopInfo(stopName: stop.name, direction: stop.direction, lineNumber: stop.line)
-                    case .failure(_, let error):
-                        let dd = 0
-                        //                    self.delegate?.presentErrorMessage(error: error!)
+                    case .failure(let error):
+                        switch error {
+                            case .NoInternetConnection:
+                                self.delegate?.showNoInternetConnectionError()
+                            default:
+                                self.delegate?.showLoadingError()
+                        }
                 }
                 self.delegate?.showActivityIndicator(loaded: true)
             }

@@ -20,6 +20,7 @@
 		199C4815216B983100F49B5B /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C4814216B983100F49B5B /* TimetableViewController.swift */; };
 		199C4818216B987E00F49B5B /* TimetableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C4817216B987E00F49B5B /* TimetableViewModel.swift */; };
 		199C481B216B989800F49B5B /* TimetableViewModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C481A216B989800F49B5B /* TimetableViewModelBase.swift */; };
+		19A1988D216F67D700EB0BC8 /* UIViewController+TopMostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A1988C216F67D700EB0BC8 /* UIViewController+TopMostController.swift */; };
 		9827F920B50A446BB6EBF428 /* Pods_Tram_Timetable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B6B559619D90503379DAE9 /* Pods_Tram_Timetable.framework */; };
 		D029C5352161956D00A26132 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C5342161956D00A26132 /* AppDelegate.swift */; };
 		D029C5372161956D00A26132 /* MapScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C5362161956D00A26132 /* MapScreenViewController.swift */; };
@@ -67,6 +68,7 @@
 		199C4814216B983100F49B5B /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
 		199C4817216B987E00F49B5B /* TimetableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewModel.swift; sourceTree = "<group>"; };
 		199C481A216B989800F49B5B /* TimetableViewModelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewModelBase.swift; sourceTree = "<group>"; };
+		19A1988C216F67D700EB0BC8 /* UIViewController+TopMostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+TopMostController.swift"; sourceTree = "<group>"; };
 		8BEBC5D801AFFC1354C01B38 /* Pods-Tram Timetable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tram Timetable.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tram Timetable/Pods-Tram Timetable.release.xcconfig"; sourceTree = "<group>"; };
 		9683EBEC86EBBB76BF0D1BF2 /* Pods-Tram Timetable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tram Timetable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tram Timetable/Pods-Tram Timetable.debug.xcconfig"; sourceTree = "<group>"; };
 		D029C5312161956D00A26132 /* Tram Timetable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tram Timetable.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,7 @@
 			children = (
 				19455195216CE50E002526F0 /* UITableView+RegisterNib.swift */,
 				19455197216CE96D002526F0 /* UICollectionView+RegisterNib.swift */,
+				19A1988C216F67D700EB0BC8 /* UIViewController+TopMostController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				199C4810216B861200F49B5B /* TimetableRow.swift in Sources */,
 				D029C5372161956D00A26132 /* MapScreenViewController.swift in Sources */,
 				D029C56C216432CA00A26132 /* MapScreenViewModel.swift in Sources */,
+				19A1988D216F67D700EB0BC8 /* UIViewController+TopMostController.swift in Sources */,
 				199C4812216B862400F49B5B /* WarsawTimetable.swift in Sources */,
 				D04CE09F216D5F9B005B8153 /* Constants.swift in Sources */,
 				D04CE0A2216D7291005B8153 /* Stops.swift in Sources */,
@@ -647,13 +651,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6539W4BMT7;
+				DEVELOPMENT_TEAM = 7LBQA8MKZW;
 				INFOPLIST_FILE = "Tram Timetable/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "mxndev.Tram-Timetable";
+				PRODUCT_BUNDLE_IDENTIFIER = "test.Tram-Timetable";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -666,13 +670,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6539W4BMT7;
+				DEVELOPMENT_TEAM = 7LBQA8MKZW;
 				INFOPLIST_FILE = "Tram Timetable/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "mxndev.Tram-Timetable";
+				PRODUCT_BUNDLE_IDENTIFIER = "test.Tram-Timetable";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -35,10 +35,10 @@ extension AlamofireServiceBase {
                 if let data = data, statusCode < 300 {
                     completionHandler(.success(data))
                 } else {
-                    completionHandler(.failure(statusCode, error))
+                    completionHandler(.failure(NetworkResultCode(rawValue: statusCode) ?? .APIError))
                 }
             } else {
-                completionHandler(.failure(500, error))
+                completionHandler(.failure(.NoInternetConnection))
             }
         }
     }

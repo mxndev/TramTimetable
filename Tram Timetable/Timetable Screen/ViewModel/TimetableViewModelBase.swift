@@ -35,4 +35,6 @@ extension TimetableViewModelBase {
 protocol TimetableViewDelegate: class {
     func showActivityIndicator(loaded: Bool)
     func setStopInfo(stopName: String, direction: String, lineNumber: String)
+    func showLoadingError()
+    func showNoInternetConnectionError()
 }
