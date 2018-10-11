@@ -71,7 +71,8 @@ class TimetableViewController: UIViewController {
                     .bind(to: (cell.minutesView?.rx.items(cellIdentifier: MinutesCell.minutesCellNib, cellType: MinutesCell.self))!) { (collectionRow, collectionElement, collectionCell) in
                         collectionCell.minutesLabel.text = collectionElement
                         
-                        if (self.viewModel.calculateNextTramTime().0 == row) && (self.viewModel.calculateNextTramTime().01 == collectionRow) {
+                        let timeNow = Date()
+                        if (self.viewModel.calculateNextTramTime(currentTime: timeNow).0 == row) && (self.viewModel.calculateNextTramTime(currentTime: timeNow).01 == collectionRow) {
                             collectionCell.minutesView.backgroundColor = UIColor.green
                         } else {
                             collectionCell.minutesView.backgroundColor = UIColor.clear

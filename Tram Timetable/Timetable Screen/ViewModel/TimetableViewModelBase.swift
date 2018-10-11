@@ -16,7 +16,9 @@ protocol TimetableViewModelBase {
     var stopInfo: Variable<Stops?> { get set }
     
     func loadTimetable()
-    func calculateNextTramTime() -> (Int, Int)
+    func convertToTimetableRow(warsawTimetable: [WarsawTimetable])
+    func addNewRecordToTimetable(hour: String, minutes: String)
+    func calculateNextTramTime(currentTime: Date) -> (Int, Int)
 }
 
 extension TimetableViewModelBase {

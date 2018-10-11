@@ -13,3 +13,9 @@ target 'Tram Timetable' do
   pod 'RxCocoa'
 
 end
+
+target 'Tram TimetableTests' do
+  pod 'Swinject'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+end

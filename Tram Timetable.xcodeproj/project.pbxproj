@@ -22,6 +22,7 @@
 		199C481B216B989800F49B5B /* TimetableViewModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C481A216B989800F49B5B /* TimetableViewModelBase.swift */; };
 		19A1988D216F67D700EB0BC8 /* UIViewController+TopMostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A1988C216F67D700EB0BC8 /* UIViewController+TopMostController.swift */; };
 		9827F920B50A446BB6EBF428 /* Pods_Tram_Timetable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B6B559619D90503379DAE9 /* Pods_Tram_Timetable.framework */; };
+		B031685E77278F05AB71BEF0 /* libPods-Tram TimetableTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0850FCE2B3E4714C8165F0EA /* libPods-Tram TimetableTests.a */; };
 		D029C5352161956D00A26132 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C5342161956D00A26132 /* AppDelegate.swift */; };
 		D029C5372161956D00A26132 /* MapScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029C5362161956D00A26132 /* MapScreenViewController.swift */; };
 		D029C53A2161956D00A26132 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D029C5382161956D00A26132 /* Map.storyboard */; };
@@ -54,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00DF3442A10CCC81A5A38065 /* Pods-Tram TimetableTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tram TimetableTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tram TimetableTests/Pods-Tram TimetableTests.release.xcconfig"; sourceTree = "<group>"; };
+		0850FCE2B3E4714C8165F0EA /* libPods-Tram TimetableTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tram TimetableTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16B6B559619D90503379DAE9 /* Pods_Tram_Timetable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tram_Timetable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19455195216CE50E002526F0 /* UITableView+RegisterNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RegisterNib.swift"; sourceTree = "<group>"; };
 		19455197216CE96D002526F0 /* UICollectionView+RegisterNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterNib.swift"; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 		19A1988C216F67D700EB0BC8 /* UIViewController+TopMostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+TopMostController.swift"; sourceTree = "<group>"; };
 		8BEBC5D801AFFC1354C01B38 /* Pods-Tram Timetable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tram Timetable.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tram Timetable/Pods-Tram Timetable.release.xcconfig"; sourceTree = "<group>"; };
 		9683EBEC86EBBB76BF0D1BF2 /* Pods-Tram Timetable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tram Timetable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tram Timetable/Pods-Tram Timetable.debug.xcconfig"; sourceTree = "<group>"; };
+		B8A667709D4990193EEF29D6 /* Pods-Tram TimetableTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tram TimetableTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tram TimetableTests/Pods-Tram TimetableTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D029C5312161956D00A26132 /* Tram Timetable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tram Timetable.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D029C5342161956D00A26132 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D029C5362161956D00A26132 /* MapScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B031685E77278F05AB71BEF0 /* libPods-Tram TimetableTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				16B6B559619D90503379DAE9 /* Pods_Tram_Timetable.framework */,
+				0850FCE2B3E4714C8165F0EA /* libPods-Tram TimetableTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -187,6 +193,8 @@
 			children = (
 				9683EBEC86EBBB76BF0D1BF2 /* Pods-Tram Timetable.debug.xcconfig */,
 				8BEBC5D801AFFC1354C01B38 /* Pods-Tram Timetable.release.xcconfig */,
+				B8A667709D4990193EEF29D6 /* Pods-Tram TimetableTests.debug.xcconfig */,
+				00DF3442A10CCC81A5A38065 /* Pods-Tram TimetableTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -331,6 +339,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D029C5512161956D00A26132 /* Build configuration list for PBXNativeTarget "Tram TimetableTests" */;
 			buildPhases = (
+				B076B5A94D59607195A78D19 /* [CP] Check Pods Manifest.lock */,
 				D029C5412161956D00A26132 /* Sources */,
 				D029C5422161956D00A26132 /* Frameworks */,
 				D029C5432161956D00A26132 /* Resources */,
@@ -425,6 +434,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B076B5A94D59607195A78D19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tram TimetableTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E5842A2A19255839E001FE3B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -433,9 +460,9 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tram Timetable/Pods-Tram Timetable-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa-framework/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-framework/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject-framework/Swinject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -653,10 +680,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7LBQA8MKZW;
 				INFOPLIST_FILE = "Tram Timetable/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "test.Tram-Timetable";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -672,10 +696,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7LBQA8MKZW;
 				INFOPLIST_FILE = "Tram Timetable/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "test.Tram-Timetable";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -685,17 +706,14 @@
 		};
 		D029C5522161956D00A26132 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8A667709D4990193EEF29D6 /* Pods-Tram TimetableTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6539W4BMT7;
 				INFOPLIST_FILE = "Tram TimetableTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mxndev.Tram-TimetableTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -706,17 +724,14 @@
 		};
 		D029C5532161956D00A26132 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00DF3442A10CCC81A5A38065 /* Pods-Tram TimetableTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6539W4BMT7;
 				INFOPLIST_FILE = "Tram TimetableTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mxndev.Tram-TimetableTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
