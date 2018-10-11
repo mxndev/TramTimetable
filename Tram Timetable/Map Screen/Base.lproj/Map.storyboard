@@ -33,10 +33,19 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="5lQ-Us-ArZ" id="93P-8v-ZDf"/>
+                        <segue destination="flw-9X-ufb" kind="presentation" identifier="ShowTimetable" id="oVI-JI-24i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Timetable-->
+        <scene sceneID="eeW-EA-aWU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Timetable" id="flw-9X-ufb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ohb-Ah-sYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698" y="33"/>
         </scene>
     </scenes>
 </document>

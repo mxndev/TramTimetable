@@ -19,7 +19,7 @@ extension TramServicesProtocol {
             let service = TramServices()
             SharedContainer.sharedContainer.register(TramServicesProtocol.self) { [service] _ in
                 service
-            }
+            }.inObjectScope(.container)
             return service
         }
         return resolved

@@ -19,7 +19,7 @@ extension AlamofireServiceBase {
             let service = AlamofireService()
             SharedContainer.sharedContainer.register(AlamofireServiceBase.self) { [service] _ in
                 service
-            }
+            }.inObjectScope(.container)
             return service
         }
         return resolved

@@ -13,6 +13,7 @@ protocol TimetableViewModelBase {
     var delegate: TimetableViewDelegate? { get set }
     
     var timetable: Variable<[TimetableRow]> { get set }
+    var stopInfo: Stops? { get set }
     
     func loadTimetable()
     func calculateNextTramTime() -> (Int, Int)
@@ -24,7 +25,7 @@ extension TimetableViewModelBase {
             let service = TimetableViewModel()
             SharedContainer.sharedContainer.register(TimetableViewModelBase.self) { [service] _ in
                 service
-            }
+            }.inObjectScope(.container)
             return service
         }
         return resolved

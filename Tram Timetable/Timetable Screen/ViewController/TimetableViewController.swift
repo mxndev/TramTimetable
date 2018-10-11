@@ -14,6 +14,10 @@ class TimetableViewController: UIViewController {
     
     @IBOutlet private weak var timetableView: UITableView!
     @IBOutlet private weak var timetableHeight: NSLayoutConstraint!
+    @IBOutlet private weak var lineNumberLabel: UILabel!
+    @IBOutlet private weak var stopNameLabel: UILabel!
+    @IBOutlet private weak var directionNameLabel: UILabel!
+    @IBOutlet private weak var closeButton: UIButton!
     
     let disposeBag = DisposeBag()
     
@@ -50,6 +54,12 @@ class TimetableViewController: UIViewController {
     private func configureSubviews() {
         // register nib
         timetableView.registerNib(name: TimetableCell.timetableCellNib)
+        
+        closeButton.rx.tap
+            .subscribe(onNext: { _ in
+                self.dismiss(animated: true, completion: nil)
+            })
+            .disposed(by: disposeBag)
         
         timetableView.estimatedRowHeight = 80
         timetableView.rowHeight = UITableViewAutomaticDimension

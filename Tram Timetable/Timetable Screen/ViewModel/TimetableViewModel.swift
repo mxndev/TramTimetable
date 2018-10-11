@@ -13,19 +13,22 @@ class TimetableViewModel: TimetableViewModelBase {
     weak var delegate: TimetableViewDelegate?
     
     var timetable: Variable<[TimetableRow]> = Variable([])
+    var stopInfo: Stops?
     
     private let apiServices: TramServicesProtocol = TramServices.instance
     
     func loadTimetable() {
-        apiServices.timetableService(stopID: "7016", stopNr: "07", line: "35") { (result: NetworkResponse<WarsawTimetableResponse>) in
-            switch result {
+        if let stop = stopInfo {
+            apiServices.timetableService(stopID: String(stop.stopID[String.Index.init(encodedOffset: 0)..<String.Index.init(encodedOffset: 3)]), stopNr: String(stop.stopID[String.Index.init(encodedOffset: 4)..<String.Index.init(encodedOffset: 5)]), line: stop.line) { (result: NetworkResponse<WarsawTimetableResponse>) in
+                switch result {
                 case .success(let warsawTimetableResponse):
                     self.convertToTimetableRow(warsawTimetable: warsawTimetableResponse.result)
                 case .failure(_, let error):
                     let dd = 0
-//                    self.delegate?.presentErrorMessage(error: error!)
+                    //                    self.delegate?.presentErrorMessage(error: error!)
+                }
+                self.delegate?.showActivityIndicator(loaded: true)
             }
-            self.delegate?.showActivityIndicator(loaded: true)
         }
     }
     

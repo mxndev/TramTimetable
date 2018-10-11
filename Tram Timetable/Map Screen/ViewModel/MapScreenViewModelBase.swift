@@ -26,7 +26,7 @@ extension MapScreenViewModelBase {
             let service = MapScreenViewModel()
             SharedContainer.sharedContainer.register(MapScreenViewModelBase.self) { [service] _ in
                 service
-            }
+            }.inObjectScope(.container)
             return service
         }
         return resolved

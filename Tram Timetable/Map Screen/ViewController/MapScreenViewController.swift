@@ -80,7 +80,6 @@ extension MapScreenViewController: CLLocationManagerDelegate {
 
 extension MapScreenViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
         let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
         annotationView.canShowCallout = true
         
@@ -93,6 +92,15 @@ extension MapScreenViewController: MKMapViewDelegate {
         }
         
         return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        self.performSegue(withIdentifier: "ShowTimetable", sender: nil)
+        if let stopAnnotation = view.annotation as? StopPoint {
+            var timetableViewModel = TimetableViewModel.instance
+            timetableViewModel.stopInfo = viewModel.stops.filter({ $0.stopID == stopAnnotation.stopId}).count > 0 ? viewModel.stops.filter({ $0.stopID == stopAnnotation.stopId})[0] : nil
+        }
+        
     }
 }
 
@@ -111,7 +119,6 @@ extension MapScreenViewController: MapScreenViewDelegate {
                 // if point is first one
                 self.centerMapOnLocation(location: CLLocation(latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude))
             }
-            point
             mapView.addAnnotation(point)
         })
     }
