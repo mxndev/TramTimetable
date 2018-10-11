@@ -13,25 +13,4 @@ class MinutesCell: UICollectionViewCell {
     
     @IBOutlet weak var minutesView: UIView!
     @IBOutlet weak var minutesLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setupLayout()
-    }
-}
-
-extension MinutesCell {
-    fileprivate func setupLayout() {
-    }
-    
-//    func fill(with item: NewsFeedItem) {
-//        imagePath = item.photo?.scaledImage
-//        descriptionViewContainer.subviews.forEach({ $0.removeFromSuperview() })
-//
-//        if let categoryType = item.category?.type, categoryType == NewsFeedCategoryType.event {
-//            configureForEvent(item: item)
-//        } else {
-//            configureForNews(item: item)
-//        }
-//    }
 }

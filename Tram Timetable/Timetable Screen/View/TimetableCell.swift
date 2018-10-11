@@ -54,14 +54,4 @@ extension TimetableCell {
         }
         return Int(height)
     }
-//    func fill(with item: NewsFeedItem) {
-//        imagePath = item.photo?.scaledImage
-//        descriptionViewContainer.subviews.forEach({ $0.removeFromSuperview() })
-//
-//        if let categoryType = item.category?.type, categoryType == NewsFeedCategoryType.event {
-//            configureForEvent(item: item)
-//        } else {
-//            configureForNews(item: item)
-//        }
-//    }
 }
