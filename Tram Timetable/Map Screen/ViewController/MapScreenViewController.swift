@@ -98,7 +98,8 @@ extension MapScreenViewController: MKMapViewDelegate {
         self.performSegue(withIdentifier: "ShowTimetable", sender: nil)
         if let stopAnnotation = view.annotation as? StopPoint {
             var timetableViewModel = TimetableViewModel.instance
-            timetableViewModel.stopInfo = viewModel.stops.filter({ $0.stopID == stopAnnotation.stopId}).count > 0 ? viewModel.stops.filter({ $0.stopID == stopAnnotation.stopId})[0] : nil
+            let stopInfo = viewModel.stops.filter({ $0.stopID == stopAnnotation.stopId})
+            timetableViewModel.stopInfo.value = stopInfo.count > 0 ? stopInfo[0] : nil
         }
         
     }

@@ -13,7 +13,7 @@ protocol TimetableViewModelBase {
     var delegate: TimetableViewDelegate? { get set }
     
     var timetable: Variable<[TimetableRow]> { get set }
-    var stopInfo: Stops? { get set }
+    var stopInfo: Variable<Stops?> { get set }
     
     func loadTimetable()
     func calculateNextTramTime() -> (Int, Int)
@@ -34,4 +34,5 @@ extension TimetableViewModelBase {
 
 protocol TimetableViewDelegate: class {
     func showActivityIndicator(loaded: Bool)
+    func setStopInfo(stopName: String, direction: String, lineNumber: String)
 }

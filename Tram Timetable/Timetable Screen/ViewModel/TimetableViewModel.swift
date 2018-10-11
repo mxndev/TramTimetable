@@ -12,20 +12,36 @@ import RxSwift
 class TimetableViewModel: TimetableViewModelBase {
     weak var delegate: TimetableViewDelegate?
     
+    let disposeBag = DisposeBag()
+    
     var timetable: Variable<[TimetableRow]> = Variable([])
-    var stopInfo: Stops?
+    var stopInfo: Variable<Stops?> = Variable(nil)
     
     private let apiServices: TramServicesProtocol = TramServices.instance
     
+    init() {
+        stopInfo.value = nil
+        
+        stopInfo.asObservable()
+            .subscribe(onNext: { _ in
+                // load timetable from server
+                self.loadTimetable()
+            })
+            .disposed(by: disposeBag)
+    }
+    
     func loadTimetable() {
-        if let stop = stopInfo {
-            apiServices.timetableService(stopID: String(stop.stopID[String.Index.init(encodedOffset: 0)..<String.Index.init(encodedOffset: 3)]), stopNr: String(stop.stopID[String.Index.init(encodedOffset: 4)..<String.Index.init(encodedOffset: 5)]), line: stop.line) { (result: NetworkResponse<WarsawTimetableResponse>) in
+        timetable.value.removeAll()
+        self.delegate?.setStopInfo(stopName: "-", direction: "-", lineNumber: "-")
+        if let stop = stopInfo.value {
+            apiServices.timetableService(stopID: String(stop.stopID[String.Index.init(encodedOffset: 0)..<String.Index.init(encodedOffset: 4)]), stopNr: String(stop.stopID[String.Index.init(encodedOffset: 4)..<String.Index.init(encodedOffset: 6)]), line: stop.line) { (result: NetworkResponse<WarsawTimetableResponse>) in
                 switch result {
-                case .success(let warsawTimetableResponse):
-                    self.convertToTimetableRow(warsawTimetable: warsawTimetableResponse.result)
-                case .failure(_, let error):
-                    let dd = 0
-                    //                    self.delegate?.presentErrorMessage(error: error!)
+                    case .success(let warsawTimetableResponse):
+                        self.convertToTimetableRow(warsawTimetable: warsawTimetableResponse.result)
+                        self.delegate?.setStopInfo(stopName: stop.name, direction: stop.direction, lineNumber: stop.line)
+                    case .failure(_, let error):
+                        let dd = 0
+                        //                    self.delegate?.presentErrorMessage(error: error!)
                 }
                 self.delegate?.showActivityIndicator(loaded: true)
             }

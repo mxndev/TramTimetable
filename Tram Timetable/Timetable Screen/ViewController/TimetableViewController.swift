@@ -37,9 +37,6 @@ class TimetableViewController: UIViewController {
         super.viewDidLoad()
         
         configureSubviews()
-        
-        // load timetable from server
-        self.viewModel.loadTimetable()
     }
     
     override func didReceiveMemoryWarning() {
@@ -102,5 +99,11 @@ extension TimetableViewController: TimetableViewDelegate {
         if loaded {
             self.timetableHeight.constant = getTableViewHeight()
         }
+    }
+    
+    func setStopInfo(stopName: String, direction: String, lineNumber: String) {
+        lineNumberLabel.text = lineNumber
+        stopNameLabel.text = stopName
+        directionNameLabel.text = direction
     }
 }
